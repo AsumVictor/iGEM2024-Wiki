@@ -5,6 +5,8 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+    <link href="{{ url_for('static', filename = '/css/main.css') }}" rel="stylesheet"> 
+    <link href="{{ url_for('static', filename = '/css/tailwind-output.css') }}" rel="stylesheet"> 
 
     <title>{% block title %}{% endblock %} | AshesiGhana - iGEM 2024</title>
   </head>
@@ -12,12 +14,16 @@
     <!-- Navigation template -->
     {% include 'navigation.html' %}
     <!-- Navigation template -->
+    <section id="up"></section>
+    <section id="down"></section>
+    <section id="left"></section>
+    <section id="right"></section>
+    <p class="bg-red-400 md:h-[3cm]">long</p>
     <main>
         {% block page_content %}{% endblock %}
     </main>
 
     {% include 'footer.html' %}
 
-    <script></script>
   </body>
 </html>
