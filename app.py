@@ -6,6 +6,7 @@ from flask_frozen import Freezer
 
 
 template_folder = path.abspath('./wiki')
+print(template_folder)
 
 app = Flask(__name__, template_folder=template_folder)
 #app.config['FREEZER_BASE_URL'] = environ.get('CI_PAGES_URL')
@@ -24,13 +25,22 @@ def serve():
 
 @app.route('/')
 def home():
+    print('______________________________________')
+    print('______________________________________')
+    print('______________________________________')
+    print('______________________________________')
+    print('______________________________________')
+    print('______________________________________')
+    print('______________________________________') 
+    print('______________________________________')
+
     return render_template('pages/home.html')
 
 @app.route('/<page>')
 def pages(page):
-    print(page)
     return render_template(str(Path('pages')) + '/' + page.lower() + '.html')
 
 # Main Function, Runs at http://0.0.0.0:8080
+PORT = 5050
 if __name__ == "__main__":
-    app.run(port=8080)
+    app.run(port=PORT)
