@@ -2,7 +2,3 @@
 @tailwind components;
 @tailwind utilities;
 
-.white {
-    background-color: white;
-    padding: 30rem;
-}
