@@ -4,6 +4,6 @@ venv
 __pycache__
 public
 node_modules
-package.json
-package-lock.json
-tailwind.config.js
+# package.json
+# package-lock.json
+# tailwind.config.js
