@@ -4,15 +4,6 @@ body {
   min-height: 100vh;
   overflow: hidden;
   font-family: "poppins";
-background-color:hsla(232,92%,11%,1);
-background-image:
-radial-gradient(at 100% 98%, hsla(197,35%,22%,1) 0px, transparent 50%),
-radial-gradient(at 0% 0%, hsla(277,83%,19%,1) 0px, transparent 50%);
-}
-
-.header{
-background-color:hsla(232,92%,11%,1);
-background-image:
-radial-gradient(at 76% 44%, hsla(197,96%,14%,1) 0px, transparent 50%),
-radial-gradient(at 32% 46%, hsla(277,83%,19%,1) 0px, transparent 50%);
+  background: rgb(2,9,54);
+  background: radial-gradient(circle, rgba(2,9,54,1) 0%, rgba(2,0,36,1) 100%);
 }

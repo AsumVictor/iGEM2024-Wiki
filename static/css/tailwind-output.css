@@ -566,18 +566,14 @@ video {
   height: 2cm;
 }
 
-.w-full {
-  width: 100%;
-}
-
-.bg-white {
-  --tw-bg-opacity: 1;
-  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
-}
-
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.header {
+  background: rgb(58,8,89);
+  background: linear-gradient(90deg, rgba(58,8,89,1) 0%, rgba(2,9,54,1) 0%, rgba(2,0,36,1) 79%);
 }
 
 @media (min-width: 450px) {
@@ -628,4 +624,3 @@ video {
     padding-right: 32rem;
   }
 }
-
