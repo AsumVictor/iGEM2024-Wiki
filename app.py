@@ -35,6 +35,6 @@ def pages(page):
     return render_template('pages/404.html')
 
 # Main Function, Runs at http://0.0.0.0:8080
-PORT = 5050
+
 if __name__ == "__main__":
-    app.run(port=PORT)
+    app.run(port=8080)
