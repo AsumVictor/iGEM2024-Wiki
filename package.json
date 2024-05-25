@@ -1,8 +1,12 @@
 {
   "scripts": {
-    "tw":"npx tailwindcss -i ./static/css/input.css -o ./static/css/tailwind-output.css --watch"
+    "start": "nodemon app.py",
+    "tw": "npx tailwindcss -i ./static/css/input.css -o ./static/css/tailwind-output.css --watch"
   },
   "devDependencies": {
     "tailwindcss": "^3.4.3"
+  },
+  "dependencies": {
+    "nodemon": "^3.1.1"
   }
 }
