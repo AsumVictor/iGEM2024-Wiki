@@ -558,8 +558,32 @@ video {
   position: static;
 }
 
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
 .block {
   display: block;
+}
+
+.flex {
+  display: flex;
 }
 
 .h-\[2cm\] {
@@ -570,14 +594,92 @@ video {
   height: 5cm;
 }
 
+.h-\[4cm\] {
+  height: 4cm;
+}
+
+.h-\[0\.3cm\] {
+  height: 0.3cm;
+}
+
+.h-\[1cm\] {
+  height: 1cm;
+}
+
+.h-\[1\.2cm\] {
+  height: 1.2cm;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-\[0\.5cm\] {
+  width: 0.5cm;
+}
+
+.w-\[0\.1cm\] {
+  width: 0.1cm;
+}
+
+.w-\[0\.4cm\] {
+  width: 0.4cm;
+}
+
+.w-\[0\.3cm\] {
+  width: 0.3cm;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.overflow-visible {
+  overflow: visible;
+}
+
+.rounded-2xl {
+  border-radius: 1rem;
+}
+
 .bg-red-400 {
   --tw-bg-opacity: 1;
   background-color: rgb(248 113 113 / var(--tw-bg-opacity));
 }
 
+.bg-white {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+
+.bg-black {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.bg-red-700 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(185 28 28 / var(--tw-bg-opacity));
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
+}
+
+.py-2 {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+}
+
+.px-5 {
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .header {
