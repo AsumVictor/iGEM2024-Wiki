@@ -6,3 +6,40 @@
     background: rgb(58,8,89);
     background: linear-gradient(90deg, rgba(58,8,89,1) 0%, rgba(2,9,54,1) 0%, rgba(2,0,36,1) 79%);
 }
+
+.pin {
+    z-index: 99;
+}
+
+.link {
+    padding: 3px 10px;
+    cursor: pointer;
+}
+
+.link::before{
+    content: '';
+    background-color: rgb(213, 204, 204);
+    height: 0.1cm;
+    width: 0%;
+    align-self: center;
+    transform: translateY(2.1rem);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    border-radius: 2px;
+}
+
+.link:hover::before{
+    width: 120%;
+}
+
+.sub-link {
+    display: none;
+    -webkit-transition:  0.25s ease-in-out;
+    -moz-transition:  0.25s ease-in-out;
+    -o-transition:  0.25s ease-in-out;
+}
+
+.link:hover .sub-link{
+    display: flex;
+}

@@ -7,11 +7,9 @@
 
   <!-- NAVIGATION SECTION -->
   <header
-    class="w-full px-3 450px:px-5 600px:px-10 750px:px-8 1000px:px-[3rem] 1400px:px-[7rem] 1650px:px-[17rem] 1800px:px-[24rem] 2050px:px-[32rem]"
+    class="w-full px-3 450px:px-5 600px:px-10 750px:px-8 1000px:px-[3rem] 1400px:px-[7rem] 1650px:px-[17rem] 1800px:px-[24rem] 2050px:px-[32rem] relative"
   >
-    <div
-      class="clipper w-full h-[0.3cm] px-5 flex justify-between overflow-visible"
-    >
+    <div class="w-full h-[0.3cm] px-5 flex justify-between overflow-visible">
       <!-- Pin one -->
       <div class="">
         <img
@@ -31,7 +29,66 @@
         />
       </div>
     </div>
-    <nav class="w-full py-2 bg-[#06081a] mt-2 h-[2cm] rounded-lg">
+    <nav
+      class="w-full py-2 bg-[#06081a] mt-2 h-[2cm] rounded-lg px-10 flex flex-row items-center justify-center"
+    >
+      <!-- desktop navigation -->
+      <ul class="desktop-link merienda-600 text-[#ebe6e6] flex flex-row gap-3">
+        <!-- home link -->
+        <li class="link flex flex-col uppercase">
+          <span><a href="/">home</a></span>
+        </li>
+
+        <!-- Project link -->
+        <li class="link flex flex-col">
+          <span class="uppercase"><a href="/project">Project</a></span>
+          <!-- overflow content -->
+          <div
+            class="sub-link absolute top-[2.2cm] w-full left-0 right-0 px-3 450px:px-5 600px:px-10 750px:px-8 1000px:px-[3rem] 1400px:px-[7rem] 1650px:px-[17rem] 1800px:px-[24rem] 2050px:px-[32rem]"
+          >
+            <div class="w-full bg-[#06081a] h-[5cm] px-10">
+              <span class="text-slate-500"> Project</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- human practices link -->
+        <li class="link flex flex-col">
+          <span class="uppercase"
+            ><a href="/human-practices">human practices</a></span
+          >
+          <!-- overflow content -->
+          <div
+            class="sub-link absolute top-[2.2cm] w-full left-0 right-0 px-3 450px:px-5 600px:px-10 750px:px-8 1000px:px-[3rem] 1400px:px-[7rem] 1650px:px-[17rem] 1800px:px-[24rem] 2050px:px-[32rem]"
+          >
+            <div class="w-full bg-[#06081a] h-[5cm] px-10">
+              <span class="text-slate-500 capitalize"> human practices</span>
+            </div>
+          </div>
+        </li>
+
+        <!-- team link -->
+        <li class="link flex flex-col uppercase">
+          <span><a href="/team">Team</a></span>
+        </li>
+      </ul>
+
+     <!-- LOGO -->
+     <div class=" w-[3cm] h-[2.2cm] rounded-3xl bg-red-400 justify-center items-center flex">
+       LOGO HERE
+     </div>
+
+     <ul class="desktop-link merienda-600 text-[#ebe6e6] flex flex-row gap-3">
+      <!-- home link -->
+      <li class="link flex flex-col uppercase">
+        <span><a href="/">Awards</a></span>
+      </li>
+
+      <!-- team link -->
+      <li class="link flex flex-col uppercase">
+        <span><a href="/team">Games</a></span>
+      </li>
+    </ul>
 
     </nav>
   </header>
