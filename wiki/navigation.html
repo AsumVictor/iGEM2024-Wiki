@@ -30,10 +30,10 @@
       </div>
     </div>
     <nav
-      class="w-full py-2 bg-[#06081a] mt-2 h-[2cm] rounded-lg px-10 flex flex-row items-center justify-center"
+      class="w-full py-2 bg-[#06081a] mt-2 h-[2cm] rounded-lg px-3 600px:px-10 flex flex-row items-center justify-between 900px:justify-center gap-5"
     >
       <!-- desktop navigation -->
-      <ul class="desktop-link merienda-600 text-[#ebe6e6] flex flex-row gap-3">
+      <ul class="hidden 900px:flex desktop-link merienda-600 text-[#ebe6e6]  flex-row gap-3">
         <!-- home link -->
         <li class="link flex flex-col uppercase">
           <span><a href="/">home</a></span>
@@ -66,29 +66,45 @@
             </div>
           </div>
         </li>
+      </ul>
 
+      <!-- LOGO -->
+      <div
+        class=" rounded-3xl  justify-center items-center flex "
+      >
+        <img src="../static/temp_images/logo.png" alt="Logo" srcset="" class="w-[1.4cm] 600px:w-[2cm] 900px:w-[3cm]">
+      </div>
+
+      <ul class="hidden 900px:flex  desktop-link merienda-600 text-[#ebe6e6] flex-row gap-3">
         <!-- team link -->
         <li class="link flex flex-col uppercase">
           <span><a href="/team">Team</a></span>
         </li>
+
+        <!-- awards link -->
+        <li class="link flex flex-col uppercase">
+          <span><a href="/awards">Awards</a></span>
+        </li>
+
+        <!-- team link -->
+        <li class="link flex flex-col uppercase">
+          <span><a href="/games">Games</a></span>
+        </li>
+
+        <li class="link flex flex-col uppercase items-center justify-center px-3">
+          <i class="fa-solid fa-language"></i>
+        </li>
       </ul>
+      <div class=" flex flex-row gap-3 900px:hidden">
 
-     <!-- LOGO -->
-     <div class=" w-[3cm] h-[2.2cm] rounded-3xl bg-red-400 justify-center items-center flex">
-       LOGO HERE
-     </div>
-
-     <ul class="desktop-link merienda-600 text-[#ebe6e6] flex flex-row gap-3">
-      <!-- home link -->
-      <li class="link flex flex-col uppercase">
-        <span><a href="/">Awards</a></span>
-      </li>
-
-      <!-- team link -->
-      <li class="link flex flex-col uppercase">
-        <span><a href="/team">Games</a></span>
-      </li>
-    </ul>
+        <button type="button" title="Language" class="text-[#e0dbdb] text-3xl  px-3">
+          <i class="fa-solid fa-language"></i>
+        </button>
+        
+        <button type="button" title="Toggle" class=" text-[#e0dbdb] text-3xl  px-3">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
 
     </nav>
   </header>
