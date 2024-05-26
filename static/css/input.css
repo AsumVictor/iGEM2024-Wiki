@@ -53,3 +53,13 @@
     display: block;
     position: fixed;
 }
+
+.m_link:hover {
+    transform: scale(1.5);
+    -webkit-transition-transform: scale(1.5);
+    -moz-transition-transform: scale(1.5);
+    -o-transition-transform: scale(1.5);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+}

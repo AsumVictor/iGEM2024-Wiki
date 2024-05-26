@@ -1,7 +1,7 @@
-import { mobileNav, openNavBtn, closeNavBtn, m_links } from "./DOMelements.js";
+import { mobileNav, openNavBtn, closeNavBtn } from "./DOMelements.js";
 
 document.addEventListener("DOMContentLoaded", () => {
-  console.log(openNavBtn);
+
   openNavBtn.addEventListener("click", () => {
     mobileNav.classList.add("show");
   });
