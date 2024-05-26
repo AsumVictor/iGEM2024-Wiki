@@ -29,11 +29,12 @@ def home():
 
 @app.route('/<page>')
 def pages(page):
+    print('-------------',page, '-------------')
     if page.lower() in valid_pages:
         return render_template(str(Path('pages')) + '/' + page.lower() + '.html')
     return render_template('pages/404.html')
 
 # Main Function, Runs at http://0.0.0.0:8080
-PORT = 5050
+
 if __name__ == "__main__":
-    app.run(port=PORT,debug =True)
+    app.run(port=8080)

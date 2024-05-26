@@ -1,112 +1,85 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Merienda:wght@300..900&display=swap');
+
+* {
+  transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
 body {
   margin: 0;
   padding: 0;
-  min-height: 100vh;
-  /* overflow: hidden; */
+  overflow-x: hidden;
+  overflow-y: auto;
   font-family: "poppins";
-  background-color: hsla(240, 80%, 7%, 1);
-  background-image: radial-gradient(
-      at 75% 19%,
-      hsla(240, 69%, 15%, 1) 0px,
-      transparent 50%
-    ),
-    radial-gradient(at 0% 100%, hsla(243, 29%, 13%, 1) 0px, transparent 50%);
+  background: #010315;
+  background: radial-gradient(circle, rgba(2,9,54,1) 0%, rgba(2,0,36,1) 100%);
 }
 
-/* -----------------------------------------------------------------
-Page background Aroura Gradient styling
------------------------------------------ */
-#up {
-  position: absolute;
-  height: 800px;
-  width: 800px;
-  border-radius: 50%;
-  background-image: linear-gradient(
-    80deg,
-    rgb(5, 124, 172),
-    rgb(43, 247, 202, 0.5)
-  );
-  filter: blur(80px);
-  animation: down 40s infinite;
-}
-#down {
-  position: absolute;
-  right: 0;
-  height: 500px;
-  width: 500px;
-  border-radius: 50%;
-  background-image: linear-gradient(
-    80deg,
-    rgba(245, 207, 82, 0.8),
-    rgba(199, 10, 114)
-  );
-  filter: blur(80px);
-  animation: up 30s infinite;
-}
-#left {
-  position: absolute;
-  height: 500px;
-  width: 500px;
-  border-radius: 50%;
-  background-image: linear-gradient(
-    80deg,
-    rgb(5, 124, 172),
-    rgba(183, 253, 52, 0.8)
-  );
-  filter: blur(80px);
-  animation: left 30s 1s infinite;
-}
-#right {
-  position: absolute;
-  height: 500px;
-  width: 500px;
-  border-radius: 50%;
-  background-image: linear-gradient(
-    80deg,
-    rgba(26, 248, 18, 0.6),
-    rgba(199, 10, 114, 0.5)
-  );
-  filter: blur(80px);
-  animation: right 40s 0.5s infinite;
+.merienda-100 {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
 }
 
-@keyframes down {
-  0%,
-  100% {
-    top: -100px;
-  }
-  70% {
-    top: 700px;
-  }
+.merienda-200 {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
 }
-@keyframes up {
-  0%,
-  100% {
-    bottom: -100px;
-  }
-  70% {
-    bottom: 700px;
-  }
+
+.merienda-300 {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
 }
-@keyframes left {
-  0%,
-  100% {
-    left: -100px;
-  }
-  70% {
-    left: 1300px;
-  }
+
+.merienda-400 {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
 }
-@keyframes right {
-  0%,
-  100% {
-    right: -100px;
-  }
-  70% {
-    right: 1300px;
-  }
+
+.merienda-500 {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
 }
-/* 
------------------------------------------------------------------
-END
------------------------------------------ */
+
+.merienda-600 {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.merienda-700 {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.merienda-800 {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  font-style: normal;
+}
+
+.merienda-900 {
+  font-family: "Merienda", cursive;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+.abril-fatface-regular {
+  font-family: "Abril Fatface", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+

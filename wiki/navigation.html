@@ -6,6 +6,175 @@
   </head>
 
   <!-- NAVIGATION SECTION -->
-  <header>Header</header>
+  <header
+    class="w-full px-3 450px:px-5 600px:px-10 750px:px-8 1000px:px-[3rem] 1400px:px-[7rem] 1650px:px-[17rem] 1800px:px-[24rem] 2050px:px-[32rem] relative"
+  >
+    <div class="w-full h-[0.3cm] px-5 flex justify-between overflow-visible">
+      <!-- Pin one -->
+      <div class="">
+        <img
+          src="../static/temp_images/Pin2.png"
+          alt=""
+          srcset=""
+          class="h-[1.2cm]"
+        />
+      </div>
+      <!-- Pin two -->
+      <div class="">
+        <img
+          src="../static/temp_images/Pin.png"
+          alt=""
+          srcset=""
+          class="h-[1.2cm]"
+        />
+      </div>
+    </div>
+    <nav
+      class="w-full py-2 bg-[#06081a] mt-2 h-[2cm] rounded-lg px-3 600px:px-10 flex flex-row items-center justify-between 900px:justify-center gap-5"
+    >
+      <!-- desktop navigation -->
+      <ul
+        class="hidden 900px:flex desktop-link merienda-600 text-[#ebe6e6] flex-row gap-3"
+      >
+        <!-- home link -->
+        <li class="link flex flex-col uppercase">
+          <span><a href="/">home</a></span>
+        </li>
+
+        <!-- Project link -->
+        <li class="link flex flex-col">
+          <span class="uppercase"><a href="/project">Project</a></span>
+          <!-- overflow content -->
+          <div
+            class="sub-link absolute top-[2.2cm] w-full left-0 right-0 px-3 450px:px-5 600px:px-10 750px:px-8 1000px:px-[3rem] 1400px:px-[7rem] 1650px:px-[17rem] 1800px:px-[24rem] 2050px:px-[32rem]"
+          >
+            <div class="w-full bg-[#06081a] px-10 pt-5 pb-10">
+              <span class="text-slate-500"> Project</span>
+              <ul class=" pr-20 1400px:pr-40">
+                <li class=" flex flex-col uppercase">
+                  <span><a href="/">Description</a></span>
+                </li>
+                <li class=" flex flex-col uppercase">
+                  <span><a href="/">Notebook</a></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+
+        <!-- human practices link -->
+        <li class="link flex flex-col">
+          <span class="uppercase"
+            ><a href="/human-practices">human practices</a></span
+          >
+          <!-- overflow content -->
+          <div
+            class="sub-link absolute top-[2.2cm] w-full left-0 right-0 px-3 450px:px-5 600px:px-10 750px:px-8 1000px:px-[3rem] 1400px:px-[7rem] 1650px:px-[17rem] 1800px:px-[24rem] 2050px:px-[32rem]"
+          >
+            <div class="w-full bg-[#06081a] h-[5cm] px-10">
+              <span class="text-slate-500 capitalize"> human practices</span>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+      <!-- LOGO -->
+      <div class="rounded-3xl justify-center items-center flex">
+        <img
+          src="../static/temp_images/logo.png"
+          alt="Logo"
+          srcset=""
+          class="w-[1.4cm] 600px:w-[2cm] 900px:w-[3cm]"
+        />
+      </div>
+
+      <ul
+        class="hidden 900px:flex desktop-link merienda-600 text-[#ebe6e6] flex-row gap-3"
+      >
+        <!-- team link -->
+        <li class="link flex flex-col uppercase">
+          <span><a href="/team">Team</a></span>
+        </li>
+
+        <!-- awards link -->
+        <li class="link flex flex-col uppercase">
+          <span><a href="/awards">Awards</a></span>
+        </li>
+
+        <!-- team link -->
+        <li class="link flex flex-col uppercase">
+          <span><a href="/games">Games</a></span>
+        </li>
+
+        <li
+          class="link flex flex-col uppercase items-center justify-center px-3"
+        >
+          <i class="fa-solid fa-language"></i>
+        </li>
+      </ul>
+
+      <div class="flex flex-row gap-3 900px:hidden">
+        <button
+          type="button"
+          title="Language"
+          class="text-[#e0dbdb] text-3xl px-3"
+        >
+          <i class="fa-solid fa-language"></i>
+        </button>
+
+        <button
+          type="button"
+          title="Toggle"
+          class="text-[#e0dbdb] text-3xl px-3 open_btn"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+      <div class="900px:hidden top-0 left-0 h-full bg-[#06081a71] w-full py-14 px-6 backdrop-blur-lg mobile_nav ">
+        <div class="flex justify-end items-center">
+          <button
+            type="button"
+            title="close"
+            class="px-4 py-1 text-4xl text-[#e0d9d9] close_btn"
+          >
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+        <!-- Links  -->
+        <ul
+          class="merienda-600 text-[#ebe6e6] w-full flex flex-col text-center justify-center items-center mt-10 text-xl gap-5 "
+        >
+          <!-- home link -->
+          <li class="link  m_link flex flex-col uppercase">
+            <span><a href="/">home</a></span>
+          </li>
+
+           <!-- project link -->
+           <li class="link m_link flex flex-col uppercase">
+            <span><a href="/project">project</a></span>
+          </li>
+
+          <li class="link m_link flex flex-col uppercase">
+            <span><a href="/human-practices">human practices</a></span>
+          </li>
+
+          <li class="link m_link flex flex-col uppercase">
+            <span><a href="/team">team</a></span>
+          </li>
+
+          <li class="link m_link flex flex-col uppercase">
+            <span><a href="/awards">awards</a></span>
+          </li>
+
+          <li class="link m_link flex flex-col uppercase">
+            <span><a href="/games">games</a></span>
+          </li>
+          
+        </ul>
+      </div>
+
+    </nav>
+  </header>
   <!-- END OF NAVIGATION SECTION -->
 </html>
