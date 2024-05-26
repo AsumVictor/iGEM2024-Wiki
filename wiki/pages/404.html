@@ -1,12 +1,37 @@
-{% extends "RootLayout.html" %}
+{% extends "RootLayout.html" %} {% block title %}Home{% endblock %} {% block
+lead %}<b>Welcome to iGEM 2023!</b> Your team has been approved and you are
+ready to start the iGEM season!{% endblock %} {% block page_content %}
+<!-- Body of Home Page  -->
+<link
+  href="{{ url_for('static', filename = '/css/404.css') }}"
+  rel="stylesheet"
+/>
 
-{% block title %}Home{% endblock %}
-{% block lead %}<b>Welcome to iGEM 2023!</b> Your team has been approved and you are ready to start the iGEM season!{% endblock %}
+<section class="mt-10">
+  <div class="ocean flex justify-center items-center">
+    <div class="bubble bubble--1"></div>
+    <div class="bubble bubble--2"></div>
+    <div class="bubble bubble--3"></div>
+    <div class="bubble bubble--4"></div>
+    <div class="bubble bubble--5"></div>
+    <div class="bubble bubble--6"></div>
+    <div class="bubble bubble--7"></div>
+    <div class="bubble bubble--8"></div>
+    <div class="bubble bubble--9"></div>
+    <div class="bubble bubble--10"></div>
+    <div class="bubble bubble--11"></div>
+    <div class="bubble bubble--12"></div>
+    <div id="octocat"></div>
+    <div class=" text-[#d2c8c8] flex justify-center items-center flex-col ">
+      <span class=" text-6xl merienda-800 text-center"> 404 </span>
+      <span class="">Page not found </span>
 
-{% block page_content %}
- <!-- Body of Home Page  -->
- <section>
-    404 - Not found
- </section>
+      <span>
+         <a href="/">Go back Home</a>
+      </span>
+    </div>
+  </div>
+
+</section>
 
 {% endblock %}

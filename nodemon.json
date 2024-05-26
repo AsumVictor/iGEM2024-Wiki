@@ -1,0 +1,7 @@
+{
+    "watch": ["static", "wiki", "wiki/pages", "."],
+    "ext": "js,css,html,py",
+    "ignore": ["node_modules", ".git"],
+    "exec": "python app.py"
+  }
+  
