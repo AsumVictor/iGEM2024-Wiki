@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
-    <link href="{{ url_for('static', filename = '/css/main.css') }}" rel="stylesheet"> 
-    <link href="{{ url_for('static', filename = '/css/tailwind-output.css') }}" rel="stylesheet"> 
 
-    <title>{% block title %}{% endblock %} | AshesiGhana - iGEM 2024</title>
-  </head>
-  <body>
-    <!-- Navigation template -->
-    {% include 'navigation.html' %}
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="license" href="https://creativecommons.org/licenses/by/4.0/" />
+  <link href="{{ url_for('static', filename = '/css/main.css') }}" rel="stylesheet">
+  <link href="{{ url_for('static', filename = '/css/tailwind-output.css') }}" rel="stylesheet">
+
+  <!--Team CSS file  -->
+  <link href="{{ url_for('static', filename = '/css/team.css') }}" rel="stylesheet">
+
+<title>{% block title %}{% endblock %} | AshesiGhana - iGEM 2024</title>
+</head>
+
+<body>
+  <!-- Navigation template -->
+  {% include 'navigation.html' %}
 
 
-    <main>
-        {% block page_content %}{% endblock %}
-    </main>
+  <main>
+    {% block page_content %}{% endblock %}
+  </main>
 
-    {% include 'footer.html' %}
+  {% include 'footer.html' %}
 
-  </body>
+</body>
+
 </html>

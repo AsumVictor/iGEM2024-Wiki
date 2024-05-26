@@ -7,7 +7,7 @@ from flask_frozen import Freezer
 
 template_folder = path.abspath('./wiki')
 print(template_folder)
-valid_pages = {'home','description','human-practices','team'}
+valid_pages = {'home','description','human-practices','team','people'}
 app = Flask(__name__, template_folder=template_folder)
 #app.config['FREEZER_BASE_URL'] = environ.get('CI_PAGES_URL')
 app.config['FREEZER_DESTINATION'] = 'public'
@@ -36,4 +36,4 @@ def pages(page):
 # Main Function, Runs at http://0.0.0.0:8080
 PORT = 5050
 if __name__ == "__main__":
-    app.run(port=PORT)
+    app.run(port=PORT,debug =True)
