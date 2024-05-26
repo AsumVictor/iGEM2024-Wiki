@@ -695,6 +695,15 @@ video {
   background-color: rgb(6 8 26 / var(--tw-bg-opacity));
 }
 
+.bg-red-400 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(248 113 113 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
 .px-10 {
   padding-left: 2.5rem;
   padding-right: 2.5rem;
@@ -761,6 +770,11 @@ video {
   line-height: 2.5rem;
 }
 
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
 .text-xl {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -772,6 +786,16 @@ video {
 
 .capitalize {
   text-transform: capitalize;
+}
+
+.text-\[\#d2c8c8\] {
+  --tw-text-opacity: 1;
+  color: rgb(210 200 200 / var(--tw-text-opacity));
+}
+
+.text-\[\#d9d0d0\] {
+  --tw-text-opacity: 1;
+  color: rgb(217 208 208 / var(--tw-text-opacity));
 }
 
 .text-\[\#e0d9d9\] {
@@ -800,6 +824,12 @@ video {
 
 .backdrop-blur-lg {
   --tw-backdrop-blur: blur(16px);
+  -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+          backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
+}
+
+.backdrop-blur-xl {
+  --tw-backdrop-blur: blur(24px);
   -webkit-backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
           backdrop-filter: var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);
 }
@@ -869,6 +899,39 @@ video {
   -webkit-transition: 0.25s ease-in-out;
   -moz-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
+}
+
+.sponsors-container {
+  overflow: hidden;
+  width: 100%;
+  background-color: transparent;
+  padding: 20px 0;
+  box-sizing: border-box;
+}
+
+.sponsors-slider {
+  display: flex;
+  width: calc(100%);
+  animation: scroll 20s linear infinite;
+}
+
+.sponsor-logo {
+  flex: 0 0 auto;
+  margin: 0 20px;
+}
+
+.sponsor-logo img {
+  height: 100px;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 @media (min-width: 450px) {

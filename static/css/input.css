@@ -68,3 +68,36 @@
   -moz-transition: 0.25s ease-in-out;
   -o-transition: 0.25s ease-in-out;
 }
+
+
+.sponsors-container {
+    overflow: hidden;
+    width: 100%;
+    background-color: transparent;
+    padding: 20px 0;
+    box-sizing: border-box;
+}
+
+.sponsors-slider {
+    display: flex;
+    width: calc(100%); 
+    animation: scroll 20s linear infinite;
+}
+
+.sponsor-logo {
+    flex: 0 0 auto; 
+    margin: 0 20px;
+}
+
+.sponsor-logo img {
+    height: 100px; 
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
