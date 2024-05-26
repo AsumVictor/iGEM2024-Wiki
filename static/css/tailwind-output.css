@@ -594,6 +594,10 @@ video {
   top: 2.2cm;
 }
 
+.z-\[99\] {
+  z-index: 99;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
