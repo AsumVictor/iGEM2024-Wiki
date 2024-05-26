@@ -43,3 +43,13 @@
 .link:hover .sub-link{
     display: flex;
 }
+
+.mobile_nav {
+    display: none;
+    position: relative;
+}
+
+.mobile_nav.show {
+    display: block;
+    position: fixed;
+}
