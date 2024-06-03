@@ -5,31 +5,49 @@
 
 {% block page_content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/human-practices.css') }}">
- <!-- Body of Home Page  -->
- <section class="human-practices">
- 
-  <div id="home" class="intro section">
-    <h2>Welcome to the Ashesi iGEM 2024 Project Homepage</h2>
-    <p>Exploring innovative solutions through synthetic biology to address global challenges.</p>
-  </div>
+<!-- Body of Home Page -->
+<section class="human-practices">
+    <div id="introduction" class="section">
+        <h1>Welcome to Kofi's Journey</h1>
+        <p>Join Kofi as he explores innovative agricultural practices to combat soil degradation.</p>
+        <button class="btn btn-primary" onclick="toggleVisibility('community')">Start the Journey</button>
+    </div>
 
-  <div id="project" class="project section">
-    <h3>Project Overview</h3>
-    <!-- TO BE WORKKED ON -->
-  </div>
+    <div id="community" class="section hidden">
+        <h2>Community Engagement</h2>
+        <p>Explore the map to see how Kofi's initiatives are being received in various locations.</p>
+        <div id="map" style="height: 300px;"></div>
+        <button class="btn btn-secondary mt-3" onclick="toggleVisibility('science')">Discover the Science</button>
+    </div>
 
-  <div id="team" class="team section">
-    <h3>Meet Our Team</h3>
-    <!-- TO BE WORKKED ON -->
-  </div>
+    <div id="science" class="section hidden">
+        <h2>Scientific Innovations</h2>
+        <p>Learn about the scientific techniques Kofi is using to improve crop yields.</p>
+        <button class="btn btn-secondary mt-3" onclick="toggleVisibility('ethics')">Ethical Considerations</button>
+    </div>
 
-  <div id="achievements" class="achievements section">
-    <h3>Notable Achievements</h3>
-    <!-- TO BE WORKKED ON -->
-  </div>
+    <div id="ethics" class="section hidden">
+        <h2>Ethical Challenges</h2>
+        <p>Consider the ethical implications of introducing genetically modified crops.</p>
+        <button class="btn btn-secondary mt-3" onclick="toggleVisibility('results')">See the Impact</button>
+    </div>
 
- 
+    <div id="results" class="section hidden">
+        <h2>Results and Future Prospects</h2>
+        <p>View the before and after effects of Kofi's work on his community.</p>
+        <button class="btn btn-success mt-3" onclick="toggleVisibility('callToAction')">Get Involved</button>
+    </div>
+
+    <div id="callToAction" class="section hidden">
+        <h2>Join the Movement</h2>
+        <p>Support the project or learn more about sustainable agricultural practices.</p>
+    </div>
 </section>
 
-
+<script>
+    function toggleVisibility(sectionId) {
+        document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
+        document.getElementById(sectionId).classList.remove('hidden');
+    }
+</script>
 {% endblock %}
