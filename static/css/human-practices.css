@@ -1,33 +1,28 @@
-body {
-    font-family: 'Montserrat', sans-serif;
+body, html {
     margin: 0;
     padding: 0;
-    background-size: 300% 300%;
-    animation: gradientBG 15s ease infinite;
-    color: #e1efff;
-    margin-top: 400px;
-  }
-  
-  @keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-  
+    overflow: hidden; /* Prevents scrolling to keep the focus on the 3D scene */
+}
 
-  
-  .section {
-    background-color: rgba(255, 255, 255, 0.6);
-    backdrop-filter: blur(5px);
-    margin: 20px 0;
+.human-practices {
+    width: 100vw;
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column; /* Aligns child divs vertically */
+    align-items: center;
+    justify-content: center;
+    background-color: #000; /* Dark background to enhance the visibility of 3D objects */
+}
+
+#scene-container {
+    width: 100%;
+    height: 75vh; /* Adjusted for viewing the panel below */
+}
+
+.additional-info {
+    width: 100%;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    transition: transform 0.3s;
-    color: #004d61;
-  }
-  
-  .section:hover {
-    transform: translateY(-10px);
-  }
-  
+    color: white;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 8px;
+}
