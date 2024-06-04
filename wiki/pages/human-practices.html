@@ -1,53 +1,78 @@
 {% extends "RootLayout.html" %}
 
-{% block title %}Home{% endblock %}
-{% block lead %}<b>Welcome to iGEM 2023!</b> Your team has been approved and you are ready to start the iGEM season!{% endblock %}
+{% block title %}Human Practices - iGEM 2023{% endblock %}
+{% block lead %}
+<b>Welcome to the Future of Mining!</b>
+Explore how synthetic biology can revolutionize sustainable practices in mining.
+{% endblock %}
 
 {% block page_content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/human-practices.css') }}">
-<!-- Body of Home Page -->
-<section class="human-practices">
-    <div id="introduction" class="section">
-        <h1>Welcome to Kofi's Journey</h1>
-        <p>Join Kofi as he explores innovative agricultural practices to combat soil degradation.</p>
-        <button class="btn btn-primary" onclick="toggleVisibility('community')">Start the Journey</button>
-    </div>
 
-    <div id="community" class="section hidden">
-        <h2>Community Engagement</h2>
-        <p>Explore the map to see how Kofi's initiatives are being received in various locations.</p>
-        <div id="map" style="height: 300px;"></div>
-        <button class="btn btn-secondary mt-3" onclick="toggleVisibility('science')">Discover the Science</button>
-    </div>
+<section id="canvas-container" style="height: 100vh;"></section>
 
-    <div id="science" class="section hidden">
-        <h2>Scientific Innovations</h2>
-        <p>Learn about the scientific techniques Kofi is using to improve crop yields.</p>
-        <button class="btn btn-secondary mt-3" onclick="toggleVisibility('ethics')">Ethical Considerations</button>
-    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script type="module">
+    import { OrbitControls } from 'https://unpkg.com/three/examples/jsm/controls/OrbitControls.js';
 
-    <div id="ethics" class="section hidden">
-        <h2>Ethical Challenges</h2>
-        <p>Consider the ethical implications of introducing genetically modified crops.</p>
-        <button class="btn btn-secondary mt-3" onclick="toggleVisibility('results')">See the Impact</button>
-    </div>
+    let scene, camera, renderer, controls;
+    let water, waterGeometry;
 
-    <div id="results" class="section hidden">
-        <h2>Results and Future Prospects</h2>
-        <p>View the before and after effects of Kofi's work on his community.</p>
-        <button class="btn btn-success mt-3" onclick="toggleVisibility('callToAction')">Get Involved</button>
-    </div>
+    function init() {
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x87ceeb);
+        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        renderer = new THREE.WebGLRenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById('canvas-container').appendChild(renderer.domElement);
 
-    <div id="callToAction" class="section hidden">
-        <h2>Join the Movement</h2>
-        <p>Support the project or learn more about sustainable agricultural practices.</p>
-    </div>
-</section>
+        controls = new OrbitControls(camera, renderer.domElement);
+        camera.position.set(0, 50, 100);
+        controls.update();
 
-<script>
-    function toggleVisibility(sectionId) {
-        document.querySelectorAll('.section').forEach(sec => sec.classList.add('hidden'));
-        document.getElementById(sectionId).classList.remove('hidden');
+        addLights();
+        addWater();
+        animate();
     }
+
+    function addLights() {
+        const ambientLight = new THREE.AmbientLight(0x404040, 2);
+        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
+        directionalLight.position.set(1, 1, 1);
+        scene.add(ambientLight);
+        scene.add(directionalLight);
+    }
+
+    function addWater() {
+        waterGeometry = new THREE.PlaneBufferGeometry(10000, 10000);
+        water = new Water(
+            waterGeometry,
+            {
+                textureWidth: 1024,
+                textureHeight: 1024,
+                waterNormals: new THREE.TextureLoader().load('path_to_water_normals_texture.jpg', function (texture) {
+                    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
+                }),
+                alpha: 1.0,
+                sunDirection: new THREE.Vector3(0.707, 0.707, 0),
+                sunColor: 0xffffff,
+                waterColor: 0x001e0f,
+                distortionScale: 3.7,
+                fog: scene.fog !== undefined
+            }
+        );
+        water.rotation.x = -Math.PI / 2;
+        water.position.y = -1;
+        scene.add(water);
+    }
+
+    function animate() {
+        requestAnimationFrame(animate);
+        water.material.uniforms['time'].value += 1.0 / 60.0;
+        controls.update();
+        renderer.render(scene, camera);
+    }
+
+    window.onload = init;
 </script>
 {% endblock %}
