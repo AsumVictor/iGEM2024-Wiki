@@ -1,78 +1,47 @@
 {% extends "RootLayout.html" %}
 
-{% block title %}Human Practices - iGEM 2023{% endblock %}
-{% block lead %}
-<b>Welcome to the Future of Mining!</b>
-Explore how synthetic biology can revolutionize sustainable practices in mining.
-{% endblock %}
+{% block title %}Home{% endblock %}
+{% block lead %}<b>Welcome to iGEM 2023!</b> Your team has been approved and you are ready to start the iGEM season!{% endblock %}
 
 {% block page_content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/human-practices.css') }}">
+<!-- Body of Home Page -->
+<section class="human-practices">
+   <div id="three-canvas" style="width: 100%; height: 100vh;"></div>
+   <script src="https://unpkg.com/three@0.126.1/build/three.min.js"></script>
+   <script type="module">
+       import { OrbitControls } from 'https://unpkg.com/three/examples/jsm/controls/OrbitControls.js';
 
-<section id="canvas-container" style="height: 100vh;"></section>
+       let scene, camera, renderer, cube;
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script type="module">
-    import { OrbitControls } from 'https://unpkg.com/three/examples/jsm/controls/OrbitControls.js';
+       function init() {
+           scene = new THREE.Scene();
+           camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+           renderer = new THREE.WebGLRenderer();
+           renderer.setSize(window.innerWidth, window.innerHeight);
+           document.getElementById('three-canvas').appendChild(renderer.domElement);
 
-    let scene, camera, renderer, controls;
-    let water, waterGeometry;
+           const geometry = new THREE.BoxGeometry();
+           const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+           cube = new THREE.Mesh(geometry, material);
+           scene.add(cube);
 
-    function init() {
-        scene = new THREE.Scene();
-        scene.background = new THREE.Color(0x87ceeb);
-        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('canvas-container').appendChild(renderer.domElement);
+           camera.position.z = 5;
 
-        controls = new OrbitControls(camera, renderer.domElement);
-        camera.position.set(0, 50, 100);
-        controls.update();
+           const controls = new OrbitControls(camera, renderer.domElement);
+           controls.update();
 
-        addLights();
-        addWater();
-        animate();
-    }
+           animate();
+       }
 
-    function addLights() {
-        const ambientLight = new THREE.AmbientLight(0x404040, 2);
-        const directionalLight = new THREE.DirectionalLight(0xffffff, 0.5);
-        directionalLight.position.set(1, 1, 1);
-        scene.add(ambientLight);
-        scene.add(directionalLight);
-    }
+       function animate() {
+           requestAnimationFrame(animate);
+           cube.rotation.x += 0.01;
+           cube.rotation.y += 0.01;
+           renderer.render(scene, camera);
+       }
 
-    function addWater() {
-        waterGeometry = new THREE.PlaneBufferGeometry(10000, 10000);
-        water = new Water(
-            waterGeometry,
-            {
-                textureWidth: 1024,
-                textureHeight: 1024,
-                waterNormals: new THREE.TextureLoader().load('path_to_water_normals_texture.jpg', function (texture) {
-                    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
-                }),
-                alpha: 1.0,
-                sunDirection: new THREE.Vector3(0.707, 0.707, 0),
-                sunColor: 0xffffff,
-                waterColor: 0x001e0f,
-                distortionScale: 3.7,
-                fog: scene.fog !== undefined
-            }
-        );
-        water.rotation.x = -Math.PI / 2;
-        water.position.y = -1;
-        scene.add(water);
-    }
-
-    function animate() {
-        requestAnimationFrame(animate);
-        water.material.uniforms['time'].value += 1.0 / 60.0;
-        controls.update();
-        renderer.render(scene, camera);
-    }
-
-    window.onload = init;
-</script>
+       init();
+   </script>
+</section>
 {% endblock %}
