@@ -594,6 +594,14 @@ video {
   top: 2.2cm;
 }
 
+.z-\[10\] {
+  z-index: 10;
+}
+
+.z-\[99\] {
+  z-index: 99;
+}
+
 .mt-10 {
   margin-top: 2.5rem;
 }
@@ -949,12 +957,10 @@ video {
 }
 
 .waves {
-  position:relative;
   width: 100%;
-  height:5cm;
-  margin-bottom:-7px;
-  min-height:3cm;
-  max-height:5cm;
+  /* height:5cm;
+    min-height:3cm;
+    max-height:5cm; */
 }
 
 /* Animation */
