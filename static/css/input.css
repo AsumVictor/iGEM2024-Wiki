@@ -103,12 +103,10 @@
 }
 
 .waves {
-    position:relative;
     width: 100%;
-    height:5cm;
-    margin-bottom:-7px; 
+    /* height:5cm;
     min-height:3cm;
-    max-height:5cm;
+    max-height:5cm; */
   }
 
   
