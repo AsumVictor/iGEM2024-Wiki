@@ -1,54 +1,33 @@
 {% extends "RootLayout.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}iGEM 2023 Human Practices{% endblock %}
 {% block lead %}
-<b>Welcome to iGEM 2023!</b> Your team has been approved and you are ready to start the iGEM season!
+<b>Welcome to iGEM 2023!</b> Dive into our project's impact on society and the environment.
 {% endblock %}
 
 {% block page_content %}
 <link rel="stylesheet" href="{{ url_for('static', filename='css/human-practices.css') }}">
-<section class="human-practices">
-    <div id="scene-container"></div>
-    <div class="additional-info">
-        <h2>Community and Environmental Impact</h2>
-        <p>Our project addresses the urgent issues of coastal erosion and plastic pollution in Ghana's coastal regions, exacerbated by climate change and improper waste management. By integrating biotechnological solutions, we aim to not only clean up these environments but also reinforce them against future damage.</p>
-        
-        <h2>Stakeholder Engagement</h2>
-        <p>We engage with local communities, environmental experts, and policymakers to ensure our approach is holistic and sustainable. Our initiatives are geared towards creating durable solutions while educating and empowering local populations about sustainable practices.</p>
-        
-        <h2>Ethical Considerations and Sustainability</h2>
-        <p>Our solution utilizes environmentally friendly methods to decompose plastic waste and use the byproducts to help prevent coastal erosion. This approach not only cleans the environment but also provides a sustainable way to protect vital coastal lands against future erosion.</p>
+<div class="navbar">
+    <a href="#impact" class="active">Environmental Impact</a>
+    <a href="#engagement">Community Engagement</a>
+    <a href="#ethics">Ethical Considerations</a>
+</div>
+<main class="main-content">
+    <div id="impact" class="section">
+        <h1>Community and Environmental Impact</h1>
+        <p>Explore how our synthetic biology solutions are transforming environmental conservation efforts.</p>
     </div>
-</section>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-<script>
-    let scene, camera, renderer;
-
-    function init() {
-        scene = new THREE.Scene();
-        camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-        camera.position.z = 5;
-
-        renderer = new THREE.WebGLRenderer({ antialias: true });
-        renderer.setSize(window.innerWidth, window.innerHeight);
-        document.getElementById('scene-container').appendChild(renderer.domElement);
-
-        const geometry = new THREE.BoxGeometry();
-        const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-        const cube = new THREE.Mesh(geometry, material);
-        scene.add(cube);
-
-        animate();
-    }
-
-    function animate() {
-        requestAnimationFrame(animate);
-        cube.rotation.x += 0.01;
-        cube.rotation.y += 0.01;
-        renderer.render(scene, camera);
-    }
-
-    window.addEventListener('load', init);
-</script>
+    <div id="engagement" class="section">
+        <h1>Stakeholder Engagement</h1>
+        <p>See how we collaborate with global communities to ensure sustainable and inclusive development.</p>
+    </div>
+    <div id="ethics" class="section">
+        <h1>Ethical Considerations and Sustainability</h1>
+        <p>Understand our commitment to maintaining the highest ethical standards in all our practices.</p>
+    </div>
+</main>
+<div class="footer">
+    © 2023 iGEM Team. All rights reserved.
+</div>
+<script src="{{ url_for('static', filename='js/hp-background.js') }}"></script>
 {% endblock %}
