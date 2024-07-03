@@ -6,7 +6,7 @@ Images, photos, icons and fonts **MUST** be stored on `static.igem.wiki` using [
 
 For up-to-date requirements, resources, help and guidance, visit [competition.igem.org/deliverables/team-wiki](https://competition.igem.org/deliverables/team-wiki).
 
-## Getting started
+## Getting started 
 
 You should probably only edit the files inside folders `static`, `wiki` and `wiki > pages`.
 1. Open the Web IDE
